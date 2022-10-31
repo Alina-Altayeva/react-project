@@ -2,6 +2,7 @@ import './style/style.css';
 import React from 'react';
 import Header from './components/header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 import Overlay from './components/overlay';
 import Center from './components/center';
 import Preguntas from './components/preguntas';

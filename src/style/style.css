@@ -17,10 +17,8 @@ html {
 
 /* Header */
 
-@media screen and (max-width: 1199px) and (min-width: 992px) {
-.container.responsive {
-    width: 100%;
-}
+header {
+    padding: 5px 0;
 }
 
 .logo {
@@ -30,7 +28,7 @@ html {
     height: auto;
 }
 .larger {
-    font-size: 1.65em;
+    font-size: 1.25em;
     text-align: center;
     margin: 0.2em 0;
     color: white;
@@ -42,7 +40,7 @@ html {
     text-align: center;
 }
 .header {
-    font-size: 1.75em;
+    font-size: 1.45em;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     color: #fff60a;
@@ -67,25 +65,34 @@ html {
     height: 100%;
     border: 0;
 }
+
 .card::before {
     display: table;
     content: " ";
 }
+
 .card::after {
     display: table;
     content: " ";
 }
+
 .card {
     background: #fff;
     border-radius: 6px;
     padding: 8px;
 }
+
 .req-form {
-    margin-right: 20px;
+    margin: 0 20px 0 15px;
 }
+
 .toCenter {
     text-align: center;
 }
+.card h2 {
+    margin: 1em 20px 1em 0;
+}
+
 h2 {
     color: #db136c;
     font-size: 1.375em !important;
@@ -100,10 +107,12 @@ h2 {
     text-align: center;
     margin: 0.5em 0 0.5em -10px;
 }
+
 h2 span {
     font-size: 1.2em !important;
     display: block;
 }
+
 .location {
     line-height: 32px;
     font-size: 1em;
@@ -112,20 +121,25 @@ h2 span {
     color: #333;
     margin-left: -10px;
 }
+
 .location #req-slots {
     text-decoration: underline;
 }
+
 .location .slots {
     text-decoration: underline;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-control-b {
     display: block;
     width: 100%;
-    height: 34px;
+    height: 42px;
     padding: 6px 12px;
+    margin: 10px 0;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
@@ -139,24 +153,28 @@ h2 span {
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
 .req-form .form-conrol {
     height: 42px;
     font-size: 1em;
     margin: 10px auto;
     padding: 4px 8px;
 }
+
 .form-control:focus {
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
 }
+
 .form-control-b:focus {
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
 }
+
 .button {
     min-height: 52px;
     -webkit-border-radius: 26px;
@@ -177,8 +195,12 @@ h2 span {
     background-position: 50% 50%;
     background-size: 200% 200%;
     color: #fff;
-    outline: none!important;
+    outline: none !important;
 }
+.wrap_submit_btn {
+    text-align: center;
+}
+
 .button.gradient {
     background: #db136c;
     background: -moz-linear-gradient(left, #db136c 0%, #fc3d03 100%);
@@ -195,20 +217,30 @@ h2 span {
     background: url(../assets/overlay.png) 50% 100% no-repeat;
     background-size: 1920px 100%;
 }
+
 .bounce {
     animation: bounce 2s infinite;
 }
+
 @keyframes bounce {
-    0%,20%,50%,80%,100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-20px);
     }
+
     60% {
         transform: translateY(-10px);
     }
 }
+
 .round-dot {
     font-size: 20px;
     color: #fff;
@@ -235,6 +267,7 @@ h2 span {
     background: #fff;
     color: #333;
 }
+
 .stoke::after {
     display: block;
     content: '';
@@ -243,34 +276,40 @@ h2 span {
     height: 3px;
     background: #3b3b3b;
 }
+
 .result {
     color: #3b3b3b;
     font-size: 1.125em;
     font-weight: bold;
     text-align: center;
 }
+
 .result img {
     display: block;
     margin: 10px auto;
     max-width: 100%;
 }
+
 .result span {
     display: block;
     font-size: 1.2em;
     color: #ea263d;
 }
+
 .stats-wrapper {
     background: #f5f4f2;
     margin: 2em auto 0;
     padding: 0 2em 2em;
     border-radius: 12px;
 }
+
 .stats-wrapper .title {
     text-align: center;
     margin: 1.5em 0 0.5em;
     font-size: 1.8em;
     color: #3b3b3b;
 }
+
 .white h1 {
     text-align: center;
     text-transform: uppercase;
@@ -278,6 +317,7 @@ h2 span {
     margin: 1em 0;
     color: #f52f00;
 }
+
 .white h1.stoke {
     font-size: 1.875em;
     color: #3b3b3b;
@@ -286,6 +326,7 @@ h2 span {
     position: relative;
     margin: 0 0 1em;
 }
+
 .item {
     width: 195px;
     float: left;
@@ -295,6 +336,7 @@ h2 span {
     border-radius: 8px;
     overflow: hidden;
 }
+
 .item.second-item {
     width: 195px;
     float: left;
@@ -315,6 +357,7 @@ h2 span {
     text-align: center;
     padding: 10px 3px;
 }
+
 .item .footer {
     font-size: 1em;
     border-top: 1px solid #e4e3e1;
@@ -323,6 +366,7 @@ h2 span {
     background-size: 20px 20px;
     text-align: center !important;
 }
+
 .item .body {
     font-size: 1.2em;
     font-weight: 500;
@@ -337,6 +381,7 @@ h2 span {
     font-weight: 700;
     color: #ea263d;
 }
+
 .player::before {
     display: inline-block;
     content: '';
@@ -349,6 +394,7 @@ h2 span {
     vertical-align: baseline;
     background-color: #11aa04;
 }
+
 .body .profit.two {
     font-size: 1em;
     text-align: center;
@@ -358,11 +404,13 @@ h2 span {
     background: transparent;
     background-size: 20px 20px;
 }
+
 .profit.two .card-body {
     font-size: 1.8em;
     display: block;
     color: #fff;
 }
+
 .table {
     overflow: auto;
     display: block;
@@ -385,6 +433,7 @@ h1.stoke.secondStoke {
     text-align: center;
     text-transform: uppercase;
 }
+
 h1.stoke.secondStoke::after {
     display: block;
     content: '';
@@ -393,11 +442,13 @@ h1.stoke.secondStoke::after {
     height: 3px;
     background: #fff;
 }
+
 .question {
     padding: 12px 0 12px 20px;
     position: relative;
     font-weight: 700;
 }
+
 .question::before {
     display: block;
     background-image: url(../assets/play.png);
@@ -411,6 +462,7 @@ h1.stoke.secondStoke::after {
 .wrapper.second {
     color: #333;
 }
+
 .second h2 {
     color: #3b3b3b;
     font-size: 1.65em;
@@ -422,6 +474,7 @@ h1.stoke.secondStoke::after {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .second h2 span {
     font-size: 1.2em;
     display: block;
@@ -439,6 +492,7 @@ h1.stoke.secondStoke::after {
     background: url(../assets/overlaytop.png) 50% 100% no-repeat;
     background-size: 1920px 100%;
 }
+
 .wrapper.white.second {
     background: #fff url(../assets/man-2.jpg) -20% 100% no-repeat;
     background-size: contain;
@@ -464,17 +518,21 @@ h1.stoke.secondStoke::after {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
 }
+
 .copyright {
     color: white;
 }
+
 .menu {
     float: right;
 }
+
 .menu a {
     color: #fff;
     padding: 0 7px 0 3px;
     text-decoration: none;
 }
+
 .menu a:hover {
     text-decoration: underline;
     color: white;

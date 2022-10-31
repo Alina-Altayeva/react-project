@@ -3,7 +3,7 @@ import depo from "./../assets/depo.png"
 import uptime from "./../assets/uptime.png"
 import profit from "./../assets/profit.png"
 import success from "./../assets/success.png"
-
+// import {useState, useEffect, useRef} from "react"
 
 class Center extends React.Component {
     render(){

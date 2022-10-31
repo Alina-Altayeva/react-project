@@ -20,13 +20,14 @@ class Header extends React.Component {
                         <img src={logo} className="logo" alt="logo"/>
                     </Col>
                 </div>
-                <div>
-
+                <div className="row larger">
+                    <div className="col-xs-12">
+                        <div className="larger subheader">BIENVENIDO A LA ZONA DE USUARIOS "GEMINI 2"</div>
+                        <div className="header larger">¡MIRA ESTE IMPORTANTE VIDEO Y APRENDE A GANAR MÁS DE $1,892,460 CADA MES!</div>
+                    </div>  
                 </div>
-                <h1 className="larger subheader">BIENVENIDO A LA ZONA DE USUARIOS "GEMINI 2"</h1>
-                <h1 className="header larger">¡MIRA ESTE IMPORTANTE VIDEO Y APRENDE A GANAR MÁS DE $1,892,460 CADA MES!</h1>
             </Container>
-            <Container fluid >
+            <div  className="container responsive">
                 <Card>
                     <Row>
                         <Col md={8} xs={12}>
@@ -46,22 +47,22 @@ class Header extends React.Component {
                                         <Col sm={6} xs={12} className="form-group wrap_surname">
                                             <input type="text" placeholder="Su apellido" id="last-name" className="filed last-name form-control-b gtd-filed-fname req w-input" />
                                         </Col>
-                                    </div>
-                                    <Col sm={12} xs={12} className="form-group wrap_email">
+                                        <Col sm={12} xs={12} className="form-group wrap_email">
                                         <input placeholder="Su dirección de correo electrónico" type="email" id="email" className="filed email form-control-b gtd-filed-fname req w-input" />
-                                    </Col>
-                                    <Col sm={12} xs={12} className="form-group wrap_phone_number">
-                                        <input type="tel" id="input-tel" className="filed tel form-control-b gtd-filed-fname req w-input" />
-                                    </Col>
-                                    <Col xs={12} className="form-group wrap_submit_btn">
-                                        <Button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
-                                    </Col>
+                                        </Col>
+                                        <Col sm={12} xs={12} className="form-group wrap_phone_number">
+                                            <input type="tel" id="input-tel" className="filed tel form-control-b gtd-filed-fname req w-input" />
+                                        </Col>
+                                        <Col xs={12} className="form-group wrap_submit_btn">
+                                            <Button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
+                                        </Col>
+                                    </div> 
                                 </div>
                             </form>
                         </Col>
                     </Row>
                 </Card>
-            </Container>
+            </div>
         </div>
     )
   }

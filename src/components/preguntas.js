@@ -4,11 +4,11 @@ class Preguntas extends React.Component {
     render() {
         return (
             <div className="Preguntas container mb-5">
-                <div className="row">
+                <div className="row justify-content-around">
                     <div className="col-xs-12">
                         <h1 className="stoke secondStoke">PREGUNTAS FRECUENTES</h1>
                     </div>
-                    <div className="col-xs-12 col-sm-10 col-md-8 offset-2">
+                    <div className="col-lg-10">
                         <div className="Faq" id="accordion">
                             <div className="question collapsed" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" href="#collapse1">
                                 <span>¿QUÉ ES "GEMINI 2"?</span>
