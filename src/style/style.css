@@ -14,6 +14,11 @@ html {
     background-attachment: fixed;
     min-height: 100%;
 }
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /* Header */
 
@@ -93,9 +98,9 @@ header {
     margin: 1em 20px 1em 0;
 }
 
-h2 {
+.firstH2 {
     color: #db136c;
-    font-size: 1.375em !important;
+    font-size: 1.375em;
     background: #db136c;
     background: -moz-linear-gradient(left, #db136c 0%, #fc3d03 100%);
     background: -webkit-linear-gradient(left, #db136c 0%, #fc3d03 100%);
@@ -329,6 +334,7 @@ h2 span {
 
 .item {
     width: 195px;
+    min-width: 195px;
     float: left;
     margin: 10px;
     border: 1px solid #023a72;
@@ -417,7 +423,25 @@ h2 span {
     table-layout: auto;
 }
 
+.scrollBar {
+    overflow-x: scroll;
+}
+.scrollable {
+    display: flex;
+    flex-direction: row;
+    scrollbar-color: #023a72 rgba(0, 0, 0, .1);
+    scrollbar-width: 5px;
+    scrollbar-color: #023a72;
+}
+
 /* Preguantes */
+
+.arrow {
+    display: inline-block;
+    padding-right: 10px;
+    border: 5px solid transparent; 
+    border-left: 6px solid white;
+}
 
 .Preguntas {
     color: white;
@@ -444,7 +468,7 @@ h1.stoke.secondStoke::after {
 }
 
 .question {
-    padding: 12px 0 12px 20px;
+    padding: 12px 0 12px 0;
     position: relative;
     font-weight: 700;
 }
@@ -455,6 +479,30 @@ h1.stoke.secondStoke::after {
     width: 5px;
     height: auto;
     position: absolute;
+}
+.showP {
+    display: block !important;
+}
+.hide {
+    display: none;
+}
+.answer {
+    margin-left: 5px;
+    padding-left: 15px;
+    border-left: 1px solid #fff60a;
+}
+li.Faq {
+    list-style: none;
+}
+
+/* OverlayTop */
+
+.overlay-top {
+    background: url(../assets/overlaytop.png) 50% 100% no-repeat;
+    background-size: 1920px 100%;
+}
+.double-spaser {
+    height: 5em;
 }
 
 /* Form  */
@@ -486,11 +534,6 @@ h1.stoke.secondStoke::after {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-}
-
-.overlay-top {
-    background: url(../assets/overlaytop.png) 50% 100% no-repeat;
-    background-size: 1920px 100%;
 }
 
 .wrapper.white.second {

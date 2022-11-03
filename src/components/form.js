@@ -3,12 +3,12 @@ import React from "react";
 class MainForm extends React.Component {
     render(){
         return(
-            <div className="Form">
+            <div className="Form js-section">
                 <div className="wrapper white second">
                     <div className="container">
                         <div className="row justify-content-around">
                             <div className="col-lg-10">
-                                <h2>Por favor, registre <span>SU COPIA "GEMINI 2"</span></h2>
+                                <h2 className="form2">Por favor, registre <span>SU COPIA "GEMINI 2"</span></h2>
                                 <form className="req-form">
                                     <div className="row">
                                         <div className="col-sm-6 col-xs-12 form-group wrap_name">

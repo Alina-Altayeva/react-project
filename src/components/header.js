@@ -36,7 +36,7 @@ class Header extends React.Component {
                             </div>       
                         </Col>
                         <Col md={4} xs={12}>
-                            <h2 className="toCenter">Por favor, registre<span>su copia de "GEMINI 2"</span></h2>
+                            <h2 className="toCenter firstH2">Por favor, registre<span>su copia de "GEMINI 2"</span></h2>
                             <div className="location toCenter">QUEDAN <span id="req-slots">2</span><span className="slots">PLAZAS</span></div>
                             <form className="req-form" id="reqForm" data-fr-reg noValidate="novalidate">
                                 <div className="gtd-form-wrapper">

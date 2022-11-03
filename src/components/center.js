@@ -20,16 +20,46 @@ class Center extends React.Component {
             },
             {
                 id: 2,
-                player: "#3590",
+                player: "#3290",
                 spanP:" $3782"
             },
             {
                 id: 3,
-                player: "#3590",
+                player: "#3444",
                 spanP:" $3782"
             },
             {
                 id: 4,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 5,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 6,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 7,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 8,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 9,
+                player: "#3590",
+                spanP:" $3782"
+            },
+            {
+                id: 10,
                 player: "#3590",
                 spanP:" $3782"
             },
@@ -60,6 +90,36 @@ class Center extends React.Component {
                 player: "#3877",
                 spanS: "$18674"
             },
+            {
+                id: 5,
+                player: "#3870",
+                spanS: "$19674"
+            },
+            {
+                id: 6,
+                player: "#3590",
+                spanS:" $3782"
+            },
+            {
+                id: 7,
+                player: "#3590",
+                spanS:" $3782"
+            },
+            {
+                id: 8,
+                player: "#3590",
+                spanS:" $3782"
+            },
+            {
+                id: 9,
+                player: "#3590",
+                spanS:" $3782"
+            },
+            {
+                id: 10,
+                player: "#3590",
+                spanS:" $3782"
+            }
         ]
         return (
         <div className="Center wrapper white">
@@ -101,45 +161,52 @@ class Center extends React.Component {
                     <div className="row">
                         <div className="col-xs-12">
                             <h1 className="title">SOLICITUDES DE RETIRADA DE FONDOS COMPLETADAS RECIENTEMENTE</h1>
-                            <div>
-                            {Array.prototype.map.call(cards, function (item) {
-                                    return <div className="item" key={item.id}>
-                                    <div className="heading">
-                                        <div className="player" key={item.player}>USUARIO {item.player}</div>
-                                    </div>
-                                    <div className="body">
-                                        <div className="profit">
-                                            RETIRAR
-                                            <span key={item.spanP}>{item.spanP}</span>
-                                        </div>
-                                    </div>
-                                    <div className="footer">
-                                        <div className="timer">Justo Ahora</div>
-                                    </div>
+                            <div className="scrollBar">
+                                <div className="scrollable">
+                                    {cards.map((v, i) => {
+                                        return(
+                                            <div className="item" key={i}>
+                                                <div className="heading">
+                                                    <div className="player">USUARIO {v.player}</div>
+                                                </div>
+                                                <div className="body">
+                                                    <div className="profit">
+                                                        RETIRAR
+                                                        <span>{v.spanP}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="footer">
+                                                    <div className="timer">Justo Ahora</div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
-                                }, this)}
                             </div>
-                            <div className="table"></div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-xs-12">
                         <h1>EL MAYOR NÚMERO DE SOLICITUDES DE RETIRADA COMPLETADAS EN <span>24 HORAS</span></h1>
-                        <div>
-                            {Array.prototype.map.call(GCards, function (item) {
-                                    return <div className="item second-item" key={item.id}>
-                                    <div className="heading">
-                                        <div className="player" key={item.player}>USUARIO {item.player}</div>
-                                    </div>
-                                    <div className="body">
-                                        <div className="profit two">
-                                            RETIRAR
-                                            <span className="card-body" key={item.spanS}>{item.spanS}</span>
+                        <div className="scrollBar">
+                            <div className="scrollable">
+                                {GCards.map((v, i) => {
+                                    return(
+                                        <div className="item second-item" key={i}>
+                                            <div className="heading">
+                                                <div className="player">USUARIO {v.player}</div>
+                                            </div>
+                                            <div className="body">
+                                                <div className="profit two">
+                                                    RETIRAR
+                                                    <span className="card-body">{v.spanS}</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            }, this)}
+                                    )
+                                })}   
+                            </div>                                                
                         </div>
                     </div>
                 </div>

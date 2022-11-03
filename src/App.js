@@ -9,9 +9,11 @@ import Preguntas from './components/preguntas';
 import MainForm from './components/form';
 import Footer from './components/footer';
 import OverlayTop from './components/overlaytop';
+import $ from "jquery";
 
 
 function App() {
+  $(document).ready(function(){}); 
   return (
     <div className="App">
       <Header></Header>
