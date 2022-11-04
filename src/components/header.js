@@ -8,6 +8,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import IntlTelInput from "react-intl-tel-input-18";
+import 'react-intl-tel-input-18/dist/main.css'
 
 class Header extends React.Component {
   render(){
@@ -27,15 +29,15 @@ class Header extends React.Component {
                     </div>  
                 </div>
             </Container>
-            <div  className="container responsive">
+            <div className="container responsive">
                 <Card>
                     <Row>
-                        <Col md={8} xs={12}>
+                        <Col lg={8} md={12} xs={12} sm={12}>
                             <div className="embed-responsive embed-responsive-16by9">
                                 <video controls loop autoPlay muted src={video}></video>
                             </div>       
                         </Col>
-                        <Col md={4} xs={12}>
+                        <Col lg={4} md={12} xs={12} sm={12}>
                             <h2 className="toCenter firstH2">Por favor, registre<span>su copia de "GEMINI 2"</span></h2>
                             <div className="location toCenter">QUEDAN <span id="req-slots">2</span><span className="slots">PLAZAS</span></div>
                             <form className="req-form" id="reqForm" data-fr-reg noValidate="novalidate">
@@ -51,7 +53,7 @@ class Header extends React.Component {
                                         <input placeholder="Su dirección de correo electrónico" type="email" id="email" className="filed email form-control-b gtd-filed-fname req w-input" />
                                         </Col>
                                         <Col sm={12} xs={12} className="form-group wrap_phone_number">
-                                            <input type="tel" id="input-tel" className="filed tel form-control-b gtd-filed-fname req w-input" />
+                                            <IntlTelInput containerClassName="intl-tel-input col-sm-12 form-control-b inputTel" inputClassName="form-control" />
                                         </Col>
                                         <Col xs={12} className="form-group wrap_submit_btn">
                                             <Button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
