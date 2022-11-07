@@ -203,6 +203,9 @@ h2 span {
     color: #fff;
     outline: none !important;
 }
+.button:hover {
+    box-shadow: none;
+}
 .wrap_submit_btn {
     text-align: center;
 }
@@ -506,6 +509,11 @@ li.Faq {
 
 /* Form  */
 
+.error {
+    border-color: red;
+    color: red;
+}
+
 .wrapper.second {
     color: #333;
 }
@@ -604,4 +612,36 @@ li.Faq {
         max-width: 100% !important;
         /* min-width: 100% !important; */
     }
+}
+
+/* Politica */
+
+.privacy {
+    padding: 100px 0;
+}
+.privacy .privacy-title {
+    text-align: center;
+    font-family: 'Geometria';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.privacy .privacy-block {
+    margin-bottom: 60px;
+}
+.privacy .privacy-block h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.privacy .privacy-block p {
+    margin-bottom: 20px;
+}
+.privacy .privacy-block ul {
+    margin-bottom: 20px;
+}
+.privacy .privacy-block ul li {
+    margin: 0 0 5px 30px;
 }

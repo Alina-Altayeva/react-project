@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-// import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import logo from "../assets/logo.png"
 import video from "./../assets/538.mp4"
 import Container from 'react-bootstrap/Container';
@@ -11,9 +11,12 @@ import Button from 'react-bootstrap/Button';
 import IntlTelInput from "react-intl-tel-input-18";
 import 'react-intl-tel-input-18/dist/main.css'
 
-class Header extends React.Component {
-  render(){
-    
+function Header () {
+    const { register, handleSubmit, formState:{errors, isValid}} = useForm({mode:'onChange'});
+  const onSubmit = (data) => {
+    console.log(data)
+  };
+
     return (
         <div className="Head">
             <Container>
@@ -40,23 +43,25 @@ class Header extends React.Component {
                         <Col lg={4} md={12} xs={12} sm={12}>
                             <h2 className="toCenter firstH2">Por favor, registre<span>su copia de "GEMINI 2"</span></h2>
                             <div className="location toCenter">QUEDAN <span id="req-slots">2</span><span className="slots">PLAZAS</span></div>
-                            <form className="req-form" id="reqForm" data-fr-reg noValidate="novalidate">
+                            <form onSubmit={handleSubmit(onSubmit)} className="req-form" id="reqForm" data-fr-reg noValidate="novalidate" >
                                 <div className="gtd-form-wrapper">
                                     <div className="row">
                                         <Col sm={6} xs={12} className="form-group wrap_name">
-                                            <input type="text" placeholder="Su nombre" id="first-name" className="filed first-name form-control-b gtd-filed-fname req w-input" />
+                                            <input {...register('SomeText', { required: true, minLength: 5})} type="text" placeholder="Su nombre" id="first-name" className="filed first-name form-control-b gtd-filed-fname req w-input" />
+                                            {errors?.SomeText && errors.SomeText.type === "minLength" && <p>Недостаточно символов</p>}
+                                            {errors?.SomeText && errors.SomeText.type === "required" && <p>Пустое поле</p>}
                                         </Col>
                                         <Col sm={6} xs={12} className="form-group wrap_surname">
-                                            <input type="text" placeholder="Su apellido" id="last-name" className="filed last-name form-control-b gtd-filed-fname req w-input" />
+                                            <input {...register('SomeText', { required: true, minLength: 5})} type="text" placeholder="Su apellido" id="last-name" className="filed last-name form-control-b gtd-filed-fname req w-input" />
                                         </Col>
                                         <Col sm={12} xs={12} className="form-group wrap_email">
                                         <input placeholder="Su dirección de correo electrónico" type="email" id="email" className="filed email form-control-b gtd-filed-fname req w-input" />
                                         </Col>
                                         <Col sm={12} xs={12} className="form-group wrap_phone_number">
-                                            <IntlTelInput containerClassName="intl-tel-input col-sm-12 form-control-b inputTel" inputClassName="form-control" />
+                                            <IntlTelInput {...register("SomeText", { required: true, minLength:5 })} containerClassName="intl-tel-input col-sm-12 form-control-b inputTel" inputClassName="form-control" />
                                         </Col>
                                         <Col xs={12} className="form-group wrap_submit_btn">
-                                            <Button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
+                                            <Button type="submit" disabled={!isValid} id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
                                         </Col>
                                     </div> 
                                 </div>
@@ -67,7 +72,7 @@ class Header extends React.Component {
             </div>
         </div>
     )
-  }
+  
 }
 
 export default Header;

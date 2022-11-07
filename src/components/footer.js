@@ -17,7 +17,7 @@ class Footer extends React.Component {
                         <div className="row">
                             <div className="col-xs-12 borderTop">
                                 <div className="menu">
-                                    <a href="/privacy/" target="_blank">POLÍTICA DE PRIVACIDAD</a>
+                                    <a href="./politica.js" target="_blank">POLÍTICA DE PRIVACIDAD</a>
                                 </div>
                                 <div className="copyright">Copyright © 2021 GEMINI 2 Todos los derechos reservados</div>
                             </div>
