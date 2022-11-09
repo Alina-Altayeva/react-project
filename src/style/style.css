@@ -558,6 +558,7 @@ li.Faq {
 .intl-tel-input.allow-dropdown input {
     border: none;
     height: 100%;
+    box-shadow: none !important;
 }
 .form-control:focus {
     border-color: #66afe9 !important;
@@ -602,9 +603,6 @@ li.Faq {
     text-decoration: underline;
     color: white;
 }
-
-
-
 
 @media screen and (max-width: 1199px) and (min-width: 990px){
     .container.responsive {

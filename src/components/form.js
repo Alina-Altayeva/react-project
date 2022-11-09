@@ -1,9 +1,10 @@
 import React from "react";
-import IntlTelInput from 'react-intl-tel-input';
+// import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
 import { useForm } from "react-hook-form";
+import Telephone from "./telephone";
 
-function MainForm(props) {
+function MainForm() {
     
     const { register, handleSubmit, formState: { errors}, reset } = useForm({mode: "onblur"})
 
@@ -11,6 +12,7 @@ function MainForm(props) {
         console.log(data);
         reset()
     }
+       
         return(
             <div className="Form js-section">
                 <div className="wrapper white second">
@@ -39,18 +41,22 @@ function MainForm(props) {
                                             {errors?.email && errors.email.type === "required" && <p style={{color: 'red'}}>This field is required.</p>}
                                         </div>
                                         
-                                        <div className="col-sm-12 col-xs-12 form-group wrap_phone_number">
-                                            
+                                        {/* <div className="col-sm-12 col-xs-12 form-group wrap_phone_number">
                                             <IntlTelInput
-                                                {...register('phoneNum', {required: true})}
-                                                containerClassName="intl-tel-input col-sm-12 form-control-b inputTel"
-                                                inputClassName="form-control"
-                                                />
-                                            {errors?.phoneNum && <p style={{color: 'red'}}>Please check phone number.</p>} 
+                                            containerClassName="intl-tel-input form-control"
+                                            inputClassName="form-control"
+                                            onPhoneNumberChange={()=> handlePhoneNumberChange(conf)}
+                                            onPhoneNumberBlur={()=> handlePhoneNumberChange(conf)}
+                                            format
+                                            /> 
                                         </div>
-                                        
+                                         */}
+                                        <Telephone></Telephone>
                                         <div className="col-xs-12 form-group wrap_submit_btn">
-                                            <button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit" >CREAR UNA CUENTA GRATUITA</button>
+                                            <button type="submit" 
+                                            id="register-button" 
+                                            // onClick={clearInput}
+                                            className="button gradient gtd-form-submit signup w-submit" >CREAR UNA CUENTA GRATUITA</button>
                                         </div>
                                     </div>
                                 </form>
