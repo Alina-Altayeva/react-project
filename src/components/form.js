@@ -2,7 +2,6 @@ import React from "react";
 import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
 import { useForm } from "react-hook-form";
-// import IntlTel from "./intlTel";
 
 function MainForm(props) {
     
@@ -12,8 +11,6 @@ function MainForm(props) {
         console.log(data);
         reset()
     }
-    
-    
         return(
             <div className="Form js-section">
                 <div className="wrapper white second">
@@ -44,12 +41,12 @@ function MainForm(props) {
                                         
                                         <div className="col-sm-12 col-xs-12 form-group wrap_phone_number">
                                             
-                                            {/* <IntlTelInput
+                                            <IntlTelInput
                                                 {...register('phoneNum', {required: true})}
                                                 containerClassName="intl-tel-input col-sm-12 form-control-b inputTel"
                                                 inputClassName="form-control"
-                                                /> */}
-                                            {/* {errors?.phoneNum && <p style={{color: 'red'}}>Please check phone number.</p>}  */}
+                                                />
+                                            {errors?.phoneNum && <p style={{color: 'red'}}>Please check phone number.</p>} 
                                         </div>
                                         
                                         <div className="col-xs-12 form-group wrap_submit_btn">

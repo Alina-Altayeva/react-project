@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@andrewsantarin/react-intl-tel-input": "^0.0.0",
     "@hookform/resolvers": "^2.9.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
-    "intl-tel-input": "^17.0.19",
     "jquery": "^3.6.1",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
@@ -16,11 +16,8 @@
     "react-bootstrap-icons": "^1.9.1",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",
-    "react-hooks-yup-form": "^0.1.5",
     "react-icons": "^4.6.0",
     "react-intl-tel-input": "^8.2.0",
-    "react-intl-tel-input-18": "^0.0.0",
-    "react-intl-tel-input-v2": "^1.0.8",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -47,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
   }
 }
