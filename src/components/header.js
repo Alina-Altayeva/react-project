@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Controller } from "react-hook-form";
+import ReactPhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import logo from "../assets/logo.png"
 import video from "./../assets/538.mp4"
 import Container from 'react-bootstrap/Container';
@@ -8,11 +11,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import IntlTelInput from "react-intl-tel-input";
-import 'react-intl-tel-input/dist/main.css';
 
 function Header () {
-    const { register, handleSubmit, formState: { errors}, reset } = useForm({mode: "onblur"})
+    const { register, handleSubmit, control, formState: { errors}, reset } = useForm({mode: "onblur"})
 
     const onSubmit = (data) => {
         console.log(data);
@@ -49,18 +50,46 @@ function Header () {
                                     <div className="row">
                                         <Col sm={6} xs={12} className="form-group wrap_name">
                                             <input {...register('firstName', { required: true })} type="text" placeholder="Su nombre" id="first-name" className="filed first-name form-control-b gtd-filed-fname req w-input" />
-                                            {errors?.firstName&& <p>Пустое поле</p>}
+                                            {errors?.firstName && errors.firstName.type === "required" && <p style={{color: 'red'}}>This field is required.</p>}
                                         </Col>
                                         <Col sm={6} xs={12} className="form-group wrap_surname">
                                             <input {...register('lastName', { required: true })} type="text" placeholder="Su apellido" id="last-name" className="filed last-name form-control-b gtd-filed-fname req w-input" />
+                                            {errors?.lastName && errors.lastName.type === "required" && <p style={{color: 'red'}}>This field is required.</p>}
                                         </Col>
                                         <Col sm={12} xs={12} className="form-group wrap_email">
-                                            <input placeholder="Su dirección de correo electrónico" type="email" id="email" className="filed email form-control-b gtd-filed-fname req w-input" />
+                                            <input 
+                                            {...register('email', { 
+                                                required: 'Email required field', 
+                                                pattern: {value:/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/,
+                                                message: 'Please enter valid email!'
+                                                } })}
+                                            placeholder="Su dirección de correo electrónico" type="email" id="email" className="filed email form-control-b gtd-filed-fname req w-input" />
                                         </Col>
                                         <Col sm={12} xs={12} className="form-group wrap_phone_number">
-                                            <IntlTelInput {...register("SomeText", { required: true })} 
+                                            {/* <IntlTelInput {...register("SomeText", { required: true })} 
                                             containerClassName="intl-tel-input col-sm-12 form-control-b inputTel" 
-                                            inputClassName="form-control" />
+                                            inputClassName="form-control" /> */}
+                                            <Controller
+                                                className="form-control-b"
+                                                control={control}
+                                                name="phone"
+                                                render={({ field: { ref, ...field } }) => (
+                                                    <ReactPhoneInput
+                                                        {...field}
+                                                        className="form-control-b"
+                                                        inputClass="form-control-b-tel"
+                                                        inputStyle={{width: '100%', border: 'none'}}
+                                                        inputExtraProps={{
+                                                            ref,
+                                                            required: true,
+                                                            autoFocus: true
+                                                        }}
+                                                        country={"us"}
+                                                        // onlyCountries={["us"]}
+                                                    />
+                                                )}
+                                            />
+                                            {errors?.email && errors.email.type === "required" && <p style={{color: 'red'}}>This field is required.</p>}
                                         </Col>
                                         <Col xs={12} className="form-group wrap_submit_btn">
                                             <Button type="submit" id="register-button" className="button gradient gtd-form-submit signup w-submit">CREAR UNA CUENTA GRATUITA</Button>
